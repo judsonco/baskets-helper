@@ -60,9 +60,11 @@ def make_login_request(username, password):
 
 
 if __name__ == '__main__':
+    username = ""
+    password = ""
     current_basket = None
     current_basket_index = 0
-    response = make_login_request('mgeorge', 'Levi88George')
+    response = make_login_request(username, password)
     judson_cookies = {}
     judson_cookies['judson-admin'] = response.cookies['judson-admin']
     products = read_basket_file('./assets/products.txt')
